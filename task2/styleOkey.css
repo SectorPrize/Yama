@@ -1,0 +1,290 @@
+body {
+  background: radial-gradient(circle, #2c2c2c 10%, transparent 13%) 3vw 3vw /
+      3vw 3vw,
+    #181818;
+}
+
+.container {
+  margin-left: 10vw;
+  display: grid;
+  grid-template-columns: 72% 35% 70%;
+  grid-template-rows: 23vw 40vw 30vw;
+  gap: 0%;
+  position: relative;
+}
+
+@keyframes black-hole-transform {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 2.7;
+  }
+}
+
+.hole {
+  grid-column: 2;
+  grid-row: 3;
+  z-index: -1;
+  position: absolute;
+}
+
+.blackhole {
+  margin-top: 11vw;
+  margin-left: 11vw;
+  width: 15vw;
+  height: 6vw;
+  background: #000000;
+  border-radius: 50%;
+}
+
+.blackholestart {
+  animation-name: black-hole-transform;
+  animation-duration: 2.3s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 0.5s;
+}
+
+@keyframes moon-transform {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 2.5;
+  }
+}
+
+.moon {
+  margin-top: 10.5vw;
+  margin-left: 11.5vw;
+  width: 14vw;
+  height: 4vw;
+  border-radius: 50%;
+  box-shadow: 0 1.4vw 0px 0.1vw rgb(0, 0, 0);
+  grid-column: 2;
+  animation-name: moon-transform;
+  animation-duration: 1.9s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 1.2s;
+  z-index: 2;
+}
+
+@keyframes girl-start {
+  from {
+    visibility: hidden;
+    transform: translateY(150%);
+  }
+  to {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+@keyframes girl-end {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(4%);
+  }
+}
+
+.girlplace {
+  grid-column: 2;
+  grid-row: 1/3;
+  overflow: hidden;
+  height: 130%;
+}
+
+.picgirlstart {
+  height: 72vw;
+  animation-name: girl-start;
+  animation-duration: 4s;
+  animation-timing-function: ease-in;
+  z-index: 1;
+}
+
+.picgirlend {
+  animation-name: girl-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 4.1s;
+}
+
+.voicehelper {
+  grid-column: 3;
+  grid-row: 1/3;
+}
+
+.picvoicehelper {
+  height: 76vw;
+}
+
+.par1 {
+  margin-right: 35%;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.paragraph1 {
+  font-size: 5vw;
+  font-family: "Montserrat", sans-serif;
+  line-height: 7vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.par2 {
+  margin-top: -3%;
+  margin-right: 8%;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.paragraph2 {
+  font-size: 2.2vw;
+  font-family: "Montserrat", sans-serif;
+  line-height: 3.1vw;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.par3 {
+  margin-top: -3%;
+  grid-column: 1;
+  grid-row: 3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.paragraph3 {
+  font-size: 4.4vw;
+  line-height: 4vw;
+}
+
+.colon {
+  font-size: 4.6vw;
+  font-weight: 400;
+}
+
+.paragraph4 {
+  margin-top: -9%;
+  font-size: 5.6vw;
+}
+
+.lastpar {
+  line-height: 9vw;
+  margin-left: 4.5vw;
+}
+
+@media (max-width: 800px) {
+  body {
+    max-width: 100%;
+    background: #181818;
+  }
+
+  .container {
+    margin-top: -5%;
+    margin-left: 1%;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+  }
+
+  .hole {
+    position: relative;
+  }
+
+  .blackhole {
+    margin-left: 0;
+    margin-top: -65%;
+    width: 30vw;
+    height: 10vw;
+  }
+
+  .moon {
+    margin-top: 0;
+    margin-left: 0;
+    margin-top: -20%;
+    width: 32.5vw;
+    height: 10vw;
+    border-radius: 50%;
+    box-shadow: 0vw 4vw 0vw 0vw #181818;
+    animation-duration: 2.3s;
+    animation-delay: 0.5s;
+    z-index: 2;
+    position: relative;
+  }
+
+  .girlplace {
+    margin-top: -12%;
+    min-height: 240vw;
+  }
+
+  .picgirlstart {
+    min-height: 210vw;
+  }
+
+  .voicehelper {
+    margin-left: -25%;
+    width: 100vw;
+    margin-top: 5%;
+    z-index: 3;
+    order: 4;
+  }
+
+  .picvoicehelper {
+    height: 135vw;
+  }
+
+  .par1 {
+    margin-right: 20%;
+  }
+
+  .paragraph1 {
+    font-size: 10.5vw;
+    line-height: 11vw;
+  }
+
+  .par2 {
+    margin-top: -3%;
+    margin-right: 8%;
+  }
+
+  .paragraph2 {
+    font-size: 4.8vw;
+    line-height: 9vw;
+  }
+
+  .par3 {
+    margin-top: 0%;
+    margin-left: 3%;
+    order: 5;
+    line-height: 5vw;
+  }
+
+  .paragraph3 {
+    font-size: 12vw;
+  }
+
+  .colon {
+    font-size: 10vw;
+    font-weight: 400;
+  }
+
+  .paragraph4 {
+    margin-left: 0;
+    font-size: 15vw;
+  }
+
+  .lastpar {
+    line-height: 15vw;
+    margin-left: 0%;
+  }
+}
